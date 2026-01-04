@@ -5,11 +5,11 @@
 <title>Mentoroid Eduvisor – Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-/* ------------------------ BASE ------------------------ */
+/* ---------- BASE ---------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -18,11 +18,9 @@ html, body {
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-/* ------------------------ HEADER ------------------------ */
+/* ---------- HEADER ---------- */
 header {
   position: sticky;
   top: 0;
@@ -36,11 +34,7 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-header h2 {
-  margin: 0;
-  font-weight: 800;
-  color: #2b2b2b;
-}
+header h2 { margin: 0; font-weight: 800; color: #2b2b2b; }
 
 header nav a {
   margin-left: 24px;
@@ -49,20 +43,19 @@ header nav a {
   transition: 0.3s;
 }
 
-header nav a:hover {
-  color: #ff7a5a;
-}
+header nav a:hover { color: #ff7a5a; }
 
-/* ------------------------ HERO VIDEO ------------------------ */
+/* ---------- HERO VIDEO ---------- */
 .hero-video {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 85vh;
   text-align: center;
   overflow: hidden;
+  padding-top: 60px;
 }
 
 /* Animated shapes behind video */
@@ -79,10 +72,7 @@ header nav a:hover {
 .hero-video .shape.two { width: 400px; height: 400px; background: #ffd1b3; bottom: 5%; right: 5%; animation-duration: 26s; }
 .hero-video .shape.three { width: 250px; height: 250px; background: #ffb7a5; top: 50%; right: 30%; animation-duration: 30s; }
 
-@keyframes float {
-  0% { transform: translate(0,0); }
-  100% { transform: translate(60px,-60px); }
-}
+@keyframes float { 0% { transform: translate(0,0); } 100% { transform: translate(60px,-60px); } }
 
 /* Video container */
 .hero-video video {
@@ -129,7 +119,7 @@ header nav a:hover {
   box-shadow: 0 16px 40px rgba(255, 122, 90, 0.45);
 }
 
-/* ------------------------ SECTIONS ------------------------ */
+/* ---------- SECTIONS ---------- */
 section {
   padding: 60px 40px;
   max-width: 1000px;
@@ -159,11 +149,11 @@ p {
   color: #444;
   line-height: 1.7;
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
 }
 
-/* Cards for “Why Mentoroid” */
+/* ---------- CARDS ---------- */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
@@ -179,16 +169,10 @@ p {
   text-align: center;
 }
 
-.card h3 {
-  color: #ff7a5a;
-  margin-bottom: 10px;
-}
+.card h3 { color: #ff7a5a; margin-bottom: 10px; }
+.card p { font-size: 15px; }
 
-.card p {
-  font-size: 15px;
-}
-
-/* Partnership form */
+/* ---------- PARTNERSHIP FORM ---------- */
 .partnership {
   background: #fff1eb;
   padding: 50px 40px;
@@ -226,7 +210,7 @@ p {
   box-shadow: 0 10px 30px rgba(255,122,90,0.35);
 }
 
-/* ------------------------ MEDIA ------------------------ */
+/* ---------- MEDIA ---------- */
 @media(max-width:768px){
   .hero-video h1 { font-size: 36px; }
   .hero-video p { font-size: 16px; }
@@ -266,30 +250,40 @@ p {
 <section id="what">
   <h2>What is Mentoroid?</h2>
   <p>
-    Mentoroid guides students to achieve their dreams while learning and earning.  
-    Our platform provides personalized mentorship, AI-powered guidance, and real-world opportunities for students to grow their careers.
+    Mentoroid Eduvisor is your personal mentor and growth partner.  
+    We guide students to achieve their dreams — landing their dream job, mastering skills, or building a successful freelancing career.  
+    Mentoroid shows you how to succeed by doing the right things at the right time, step by step.  
+    We help students gain financial independence even while learning and encourage them to follow their passion to earn.  
+    Mentoroid is not just a platform; it’s your partner in learning, earning, and growing — helping you overcome challenges and unlock your full potential.
   </p>
 </section>
 
 <!-- WHY MENTOROID -->
 <section id="why">
   <h2>Why Mentoroid is Required?</h2>
+  <p>
+    Millions of youth in India are unemployed — not because jobs are missing, but because they lack skills.  
+    Companies struggle to find qualified candidates, while many talented students fall behind due to a lack of guidance.  
+    Mentoroid bridges this gap by providing skill-based training, personalized mentorship, and real-world guidance.  
+    We prepare students for MNCs, freelancing projects, and skill-based professions that truly pay.  
+    Mentoroid empowers students to learn practical skills, discover earning opportunities, and become confident, industry-ready professionals.
+  </p>
   <div class="cards">
     <div class="card">
       <h3>Skill Development</h3>
-      <p>Learn social media marketing, freelancing, and other skills to become industry-ready.</p>
+      <p>Learn social media marketing, freelancing, and career-ready skills.</p>
     </div>
     <div class="card">
       <h3>Personalized Guidance</h3>
-      <p>Each student receives mentorship tailored to their career path and field.</p>
+      <p>Mentorship tailored to each student’s career path and dreams.</p>
     </div>
     <div class="card">
       <h3>AI Assistance</h3>
-      <p>Mentoroid AI helps students with study guidance, work tips, and project support.</p>
+      <p>Mentoroid AI guides you during study & work for better results.</p>
     </div>
     <div class="card">
       <h3>Earn While Learning</h3>
-      <p>Collaborate with brands, get freelancing projects, and build a professional portfolio.</p>
+      <p>Collaborate with brands and build a professional portfolio while learning.</p>
     </div>
   </div>
 </section>
@@ -298,15 +292,20 @@ p {
 <section id="vision">
   <h2>Our Vision</h2>
   <p>
-    Mentoroid is creating a culture of freelancers and helping students explore multiple ways to learn and earn.  
-    Our upcoming app will allow students to learn skills, get clients for freelancing projects, collaborate with brands, and showcase their portfolios — all in one place.
+    Mentoroid’s vision is to create a system where every student receives quality education and guidance to achieve their dream job or profession.  
+    We ensure everyone can do the work they love. Mentoroid makes learning practical, not just theoretical, focusing on skills that truly pay.  
+    Our upcoming Mentoroid App will bring learning, freelancing, brand collaborations, and portfolio showcases — all in one place.  
+    Mentoroid ensures your journey from student to professional is smooth, supported, and successful.
   </p>
 </section>
 
 <!-- PARTNERSHIP PROGRAM -->
 <section class="partnership" id="partnership">
   <h2>Mentoroid Partnership Program</h2>
-  <p>Connect with us to collaborate and create opportunities for students and brands.</p>
+  <p>
+    Mentoroid is building a system that creates a win-win situation for students, companies, and brands.  
+    Kindly fill the details below to know more and explore partnership opportunities.
+  </p>
   
   <form action="partnership-details.html" method="get">
     <input type="text" name="name" placeholder="Your Name" required>
