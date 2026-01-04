@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mentoroid Eduvisor | Student Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffe6dc;
+  color: #2b2b2b;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* ---------- HEADER ---------- */
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* ---------- GUIDELINES ---------- */
+.guidelines {
+  background: #fff1eb;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.guidelines h2 {
+  margin-top: 0;
+  color: #ff7a5a;
+}
+
+.guidelines ul {
+  padding-left: 20px;
+}
+
+.guidelines li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* ---------- FORM ---------- */
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  color: #ff7a5a;
+}
+
+label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+textarea { resize: vertical; }
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  font-weight: 400;
+}
+
+/* ---------- SUBMIT ---------- */
+button {
+  margin-top: 40px;
+  padding: 16px 40px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#ff7a5a,#ff9a7a);
+  color: white;
+  box-shadow: 0 12px 30px rgba(255,122,90,0.35);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:768px){
+  h1 { font-size: 32px; }
+  form { padding: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Start Your Journey with Mentoroid</h1>
+  <p class="subtitle">Learn • Earn • Grow</p>
+
+  <!-- GUIDELINES -->
+  <div class="guidelines">
+    <h2>Important Guidelines (Please Read Carefully)</h2>
+    <ul>
+      <li>Fill the form honestly and completely. This helps us guide you better.</li>
+      <li>There are no right or wrong answers — clarity matters more than perfection.</li>
+      <li>This program is for students who are serious about learning and growth.</li>
+      <li>Incomplete or incorrect information may reduce your chances of selection.</li>
+      <li>Your responses help Mentoroid personalize guidance for you.</li>
+    </ul>
+  </div>
+
+  <!-- FORM -->
+  <form>
+
+    <!-- BASIC DETAILS -->
+    <div class="section-title">Basic Details</div>
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Email Address</label>
+    <input type="email" required>
+
+    <label>Mobile Number</label>
+    <input type="tel" required>
+
+    <label>City / State</label>
+    <input type="text" required>
+
+    <label>Age</label>
+    <input type="number" min="15" max="40" required>
+
+    <!-- EDUCATION -->
+    <div class="section-title">Education & Background</div>
+
+    <label>Current Status</label>
+    <select required>
+      <option value="">Select</option>
+      <option>School Student</option>
+      <option>College Student</option>
+      <option>Graduate</option>
+      <option>Working Professional</option>
+      <option>Other</option>
+    </select>
+
+    <label>Field of Study / Interest</label>
+    <input type="text" placeholder="Eg: Commerce, Tech, Marketing, Design">
+
+    <!-- DEVICE -->
+    <div class="section-title">Resources & Availability</div>
+
+    <label>Which device do you have for learning & work?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Laptop</option>
+      <option>Mobile Only</option>
+      <option>Laptop + Mobile</option>
+      <option>No Personal Device</option>
+    </select>
+
+    <label>How many hours can you dedicate daily?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Less than 1 hour</option>
+      <option>1–2 hours</option>
+      <option>2–4 hours</option>
+      <option>More than 4 hours</option>
+    </select>
+
+    <!-- GOALS -->
+    <div class="section-title">Goals & Mindset</div>
+
+    <label>What is your dream career or profession?</label>
+    <textarea rows="3" required></textarea>
+
+    <label>Why do you want to join Mentoroid?</label>
+    <textarea rows="3" required></textarea>
+
+    <label>Do you want to earn while learning?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Yes, definitely</option>
+      <option>Maybe in future</option>
+      <option>No, only learning</option>
+    </select>
+
+    <!-- DEDICATION -->
+    <div class="section-title">Dedication & Discipline</div>
+
+    <label>How serious are you about improving your skills? (1–5)</label>
+    <select required>
+      <option value="">Select</option>
+      <option>1 - Not serious</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5 - Extremely serious</option>
+    </select>
+
+    <label>What challenges are you currently facing in your career or studies?</label>
+    <textarea rows="3"></textarea>
+
+    <label>What makes you different from others?</label>
+    <textarea rows="3"></textarea>
+
+    <!-- PERSONAL -->
+    <div class="section-title">Personal Insights</div>
+
+    <label>Your hobbies or interests</label>
+    <input type="text" placeholder="Eg: Content creation, sports, teaching">
+
+    <label>If selected, are you willing to follow guidance consistently?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Yes</option>
+      <option>Not sure</option>
+      <option>No</option>
+    </select>
+
+    <button type="submit">Submit Application</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
