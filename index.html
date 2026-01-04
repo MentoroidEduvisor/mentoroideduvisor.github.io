@@ -1,103 +1,94 @@
 <!DOCTYPE html>
-<html>
-<<style>
-  h1 {
-    color: #1a73e8;
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  h2 {
-    color: #222;
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  p, ul {
-    font-size: 16px;
-  }
-  ul li {
-    margin-bottom: 6px;
-  }
-  a.button {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: #1a73e8;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 6px;
-    margin-top: 10px;
-  }
-  a.button:hover {
-    background-color: #155ab6;
-  }
-</style>>
-  <title>Mentoroid | Learn • Earn • Grow</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mentoroid Eduvisor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Peach animated background */
+body {
+  background: linear-gradient(
+    -45deg,
+    #ffd6c9,
+    #ffb7a5,
+    #ffd1b3,
+    #ffeadf
+  );
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Background animation */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center box */
+.hero {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 50px 40px;
+  border-radius: 18px;
+  max-width: 600px;
+}
+
+/* Title */
+.hero h1 {
+  font-size: 48px;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+}
+
+/* Slogan */
+.hero p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  background: #ff7a5a;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff5a36;
+  transform: translateY(-2px);
+}
+</style>
 </head>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-             padding:20px; 
-             background-color:#f9f9f9; 
-             color:#333; 
-             line-height:1.6;">
 
-  <h1>Mentoroid</h1>
+<body>
 
-  <p>
-    Mentoroid is a free learning and earning system where we train
-    students in social media marketing with AI integration and help
-    them earn through real product promotions.
-  </p>
+<div class="hero">
+  <h1>Mentoroid Eduvisor</h1>
+  <p>Learn • Earn • Grow with Smart Marketing</p>
 
-  <h2>What We Do</h2>
-  <ul>
-    <li>Free training for selected students</li>
-    <li>Social media marketing with AI tools</li>
-    <li>Commission-based brand collaborations</li>
-    <li>Learn while you earn model</li>
-  </ul>
-
-  <h2>Limited Seats</h2>
-  <p>Only 20 students are selected per batch.</p>
+  <a href="home.html" class="btn">Enter Platform</a>
+  <a href="https://forms.gle/t7PQdUBsgKUshqSHA" class="btn" target="_blank">Apply Now</a>
+</div>
 
 </body>
 </html>
-<p>
-  <a href="https://forms.gle/t7PQdUBsgKUshqSHA" target="_blank" 
-     style="display:inline-block; padding:12px 24px; background-color:#0066ff; color:white; text-decoration:none; font-size:18px; border-radius:6px;">
-    Apply Now
-  <<a href="https://forms.gle/t7PQdUBsgKUshqSHA" target="_blank" class="button">
-  Apply Now
-</a>>
-</p>
-<section>
-  <h1>Mentoroid</h1>
-  <p>Learn social media marketing with AI integration and earn while you learn. Limited 20 seats per batch.</p>
-</section>
-<section>
-  <h2>What We Do</h2>
-  <ul>
-    <li>Free training for selected students</li>
-    <li>AI-based social media marketing</li>
-    <li>Real brand & product promotions</li>
-    <li>Learn while you earn model</li>
-  </ul>
-</section>
-<section>
-  <h2>Who Can Join</h2>
-  <ul>
-    <li>Students</li>
-    <li>Brands</li>
-    <li>Colleges & courses</li>
-  </ul>
-</section>
-<section>
-  <h2>Apply Now</h2>
-  <p>Click below to submit your application:</p>
-  <a href="https://forms.gle/t7PQdUBsgKUshqSHA" target="_blank" class="button">
-    Apply Now
-  </a>
-</section>
-<footer style="margin-top:40px; text-align:center; color:#777; font-size:14px;">
-  © 2026 Mentoroid. All Rights Reserved.
-</footer>
