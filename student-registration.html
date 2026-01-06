@@ -1,293 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mentoroid Eduvisor | Student Registration</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentoroid Eduvisor | Student Registration</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffede4, #ffe0d2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-<style>
-* { box-sizing: border-box; }
+    .container {
+      background: #ffffff;
+      width: 95%;
+      max-width: 650px;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #ffe6dc;
-  color: #2b2b2b;
-}
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 10px;
+    }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
+    p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 25px;
+    }
 
-/* ---------- HEADER ---------- */
-h1 {
-  font-size: 42px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
-}
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+      color: #333;
+    }
 
-.subtitle {
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
-}
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
 
-/* ---------- GUIDELINES ---------- */
-.guidelines {
-  background: #fff1eb;
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 50px;
-}
+    textarea {
+      resize: vertical;
+    }
 
-.guidelines h2 {
-  margin-top: 0;
-  color: #ff7a5a;
-}
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: #ff7a45;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-.guidelines ul {
-  padding-left: 20px;
-}
+    button:hover {
+      background: #ff5e24;
+    }
 
-.guidelines li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-/* ---------- FORM ---------- */
-form {
-  background: white;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-}
-
-.section-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 40px 0 20px;
-  color: #ff7a5a;
-}
-
-label {
-  display: block;
-  margin: 18px 0 6px;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-}
-
-textarea { resize: vertical; }
-
-.radio-group {
-  display: flex;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.radio-group label {
-  font-weight: 400;
-}
-
-/* ---------- SUBMIT ---------- */
-button {
-  margin-top: 40px;
-  padding: 16px 40px;
-  font-size: 16px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg,#ff7a5a,#ff9a7a);
-  color: white;
-  box-shadow: 0 12px 30px rgba(255,122,90,0.35);
-  transition: 0.3s ease;
-}
-
-button:hover {
-  transform: translateY(-4px);
-}
-
-/* ---------- MOBILE ---------- */
-@media(max-width:768px){
-  h1 { font-size: 32px; }
-  form { padding: 25px; }
-}
-</style>
+    .note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
+    <h1>Mentoroid Eduvisor</h1>
+    <p>Apply to learn, earn & grow with proper mentorship</p>
 
-  <h1>Start Your Journey with Mentoroid</h1>
-  <p class="subtitle">Learn • Earn • Grow</p>
+    <form id="registrationForm">
 
-  <!-- GUIDELINES -->
-  <div class="guidelines">
-    <h2>Important Guidelines (Please Read Carefully)</h2>
-    <ul>
-      <li>Fill the form honestly and completely. This helps us guide you better.</li>
-      <li>There are no right or wrong answers — clarity matters more than perfection.</li>
-      <li>This program is for students who are serious about learning and growth.</li>
-      <li>Incomplete or incorrect information may reduce your chances of selection.</li>
-      <li>Your responses help Mentoroid personalize guidance for you.</li>
-    </ul>
+      <label>Full Name</label>
+      <input type="text" name="fullName" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+
+      <label>WhatsApp Number</label>
+      <input type="tel" name="phone" required>
+
+      <label>Current Field / Interest Area</label>
+      <input type="text" name="field" placeholder="Eg: Marketing, Tech, Design" required>
+
+      <label>What skills do you already have?</label>
+      <textarea name="skills" rows="3" required></textarea>
+
+      <label>Device Available for Learning & Work</label>
+      <select name="device" required>
+        <option value="">Select</option>
+        <option value="Mobile only">Mobile only</option>
+        <option value="Laptop only">Laptop only</option>
+        <option value="Laptop + Mobile">Laptop + Mobile</option>
+      </select>
+
+      <label>Your hobbies or interests</label>
+      <textarea name="hobbies" rows="3"></textarea>
+
+      <label>Are you willing to follow guidance consistently?</label>
+      <select name="commitment" required>
+        <option value="">Select</option>
+        <option value="Yes, fully committed">Yes, fully committed</option>
+        <option value="I will try my best">I will try my best</option>
+        <option value="Not sure">Not sure</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+
+      <div class="note">
+        Please fill all details honestly. This helps us guide you better.
+      </div>
+
+    </form>
   </div>
 
-  <!-- FORM -->
-  <form>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxa2NefTZIvNjdIacxy7Naa4COo2ljWRYdXRl6tpKjI0ScCkq7odSKpt-zv0j43wL21/exec";
+    const form = document.getElementById("registrationForm");
 
-    <!-- BASIC DETAILS -->
-    <div class="section-title">Basic Details</div>
+    form.addEventListener("submit", e => {
+      e.preventDefault();
 
-    <label>Full Name</label>
-    <input type="text" required>
+      const formData = new FormData(form);
 
-    <label>Email Address</label>
-    <input type="email" required>
+      const data = {
+        fullName: formData.get("fullName"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        field: formData.get("field"),
+        skills: formData.get("skills"),
+        device: formData.get("device"),
+        hobbies: formData.get("hobbies"),
+        commitment: formData.get("commitment")
+      };
 
-    <label>Mobile Number</label>
-    <input type="tel" required>
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(res => res.json())
+      .then(response => {
+        if (response.result === "success") {
+          alert("✅ Application submitted successfully!");
+          form.reset();
+        } else {
+          alert("❌ Error: " + response.message);
+        }
+      })
+      .catch(error => {
+        alert("❌ Something went wrong. Please try again.");
+        console.error(error);
+      });
+    });
+  </script>
 
-    <label>City / State</label>
-    <input type="text" required>
-
-    <label>Age</label>
-    <input type="number" min="15" max="40" required>
-
-    <!-- EDUCATION -->
-    <div class="section-title">Education & Background</div>
-
-    <label>Current Status</label>
-    <select required>
-      <option value="">Select</option>
-      <option>School Student</option>
-      <option>College Student</option>
-      <option>Graduate</option>
-      <option>Working Professional</option>
-      <option>Other</option>
-    </select>
-
-    <label>Field of Study / Interest</label>
-    <input type="text" placeholder="Eg: Commerce, Tech, Marketing, Design">
-
-    <!-- DEVICE -->
-    <div class="section-title">Resources & Availability</div>
-
-    <label>Which device do you have for learning & work?</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Laptop</option>
-      <option>Mobile Only</option>
-      <option>Laptop + Mobile</option>
-      <option>No Personal Device</option>
-    </select>
-
-    <label>How many hours can you dedicate daily?</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Less than 1 hour</option>
-      <option>1–2 hours</option>
-      <option>2–4 hours</option>
-      <option>More than 4 hours</option>
-    </select>
-
-    <!-- GOALS -->
-    <div class="section-title">Goals & Mindset</div>
-
-    <label>What is your dream career or profession?</label>
-    <textarea rows="3" required></textarea>
-
-    <label>Why do you want to join Mentoroid?</label>
-    <textarea rows="3" required></textarea>
-
-    <label>Do you want to earn while learning?</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Yes, definitely</option>
-      <option>Maybe in future</option>
-      <option>No, only learning</option>
-    </select>
-
-    <!-- DEDICATION -->
-    <div class="section-title">Dedication & Discipline</div>
-
-    <label>How serious are you about improving your skills? (1–5)</label>
-    <select required>
-      <option value="">Select</option>
-      <option>1 - Not serious</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5 - Extremely serious</option>
-    </select>
-
-    <label>What challenges are you currently facing in your career or studies?</label>
-    <textarea rows="3"></textarea>
-
-    <label>What makes you different from others?</label>
-    <textarea rows="3"></textarea>
-
-    <!-- PERSONAL -->
-    <div class="section-title">Personal Insights</div>
-
-    <label>Your hobbies or interests</label>
-    <input type="text" placeholder="Eg: Content creation, sports, teaching">
-
-    <label>If selected, are you willing to follow guidance consistently?</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Yes</option>
-      <option>Not sure</option>
-      <option>No</option>
-    </select>
-
-    <button type="submit">Submit Application</button>
-
-  </form>
-
-</div>
-<script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbyMNPDzFlSD2LNfVLgm7QByU2JpMslnSUnRQerR_S2PxrXI6gk5iV7gGN6xSEO0A8Lf/exec";
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", e => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-
-  fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  .then(response => {
-    alert("Registration submitted successfully!");
-    form.reset();
-  })
-  .catch(error => {
-    alert("Something went wrong. Please try again.");
-    console.error(error);
-  });
-});
-</script>
 </body>
 </html>
