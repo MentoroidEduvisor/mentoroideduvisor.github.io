@@ -261,6 +261,33 @@ button:hover {
   </form>
 
 </div>
+<script>
+const scriptURL = "https://script.google.com/macros/s/XXXXXXXX/exec";
 
+const form = document.querySelector("form");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => {
+    alert("Registration submitted successfully!");
+    form.reset();
+  })
+  .catch(error => {
+    alert("Something went wrong. Please try again.");
+    console.error(error);
+  });
+});
+</script>
 </body>
 </html>
