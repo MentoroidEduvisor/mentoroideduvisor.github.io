@@ -1,181 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mentoroid Eduvisor | Student Registration</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffede4, #ffe0d2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      background: #ffffff;
-      width: 95%;
-      max-width: 650px;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-      color: #333;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      background: #ff7a45;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background: #ff5e24;
-    }
-
-    .note {
-      font-size: 13px;
-      color: #777;
-      margin-top: 15px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoroid Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>Mentoroid Eduvisor</h1>
-    <p>Apply to learn, earn & grow with proper mentorship</p>
+<div class="container">
+    <h2>Mentoroid Student Registration</h2>
+    <form action="#" method="POST">
+        <!-- Personal Info -->
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
 
-    <form id="registrationForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <label>Full Name</label>
-      <input type="text" name="fullName" required>
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" name="phone" required>
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
 
-      <label>WhatsApp Number</label>
-      <input type="tel" name="phone" required>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state">
 
-      <label>Current Field / Interest Area</label>
-      <input type="text" name="field" placeholder="Eg: Marketing, Tech, Design" required>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="10" max="100">
 
-      <label>What skills do you already have?</label>
-      <textarea name="skills" rows="3" required></textarea>
+        <!-- Education & Career -->
+        <label for="status">Current Status</label>
+        <select id="status" name="status">
+            <option value="school">School Student</option>
+            <option value="college">College Student</option>
+            <option value="graduate">Graduate</option>
+            <option value="working">Working Professional</option>
+        </select>
 
-      <label>Device Available for Learning & Work</label>
-      <select name="device" required>
-        <option value="">Select</option>
-        <option value="Mobile only">Mobile only</option>
-        <option value="Laptop only">Laptop only</option>
-        <option value="Laptop + Mobile">Laptop + Mobile</option>
-      </select>
+        <label for="field">Field of Study / Interest</label>
+        <input type="text" id="field" name="field">
 
-      <label>Your hobbies or interests</label>
-      <textarea name="hobbies" rows="3"></textarea>
+        <!-- Devices & Time -->
+        <label>Devices Available</label>
+        <input type="checkbox" name="devices" value="Laptop"> Laptop
+        <input type="checkbox" name="devices" value="Mobile"> Mobile
+        <input type="checkbox" name="devices" value="Tablet"> Tablet
 
-      <label>Are you willing to follow guidance consistently?</label>
-      <select name="commitment" required>
-        <option value="">Select</option>
-        <option value="Yes, fully committed">Yes, fully committed</option>
-        <option value="I will try my best">I will try my best</option>
-        <option value="Not sure">Not sure</option>
-      </select>
+        <label for="hours">Daily Hours You Can Commit</label>
+        <input type="number" id="hours" name="hours" min="1" max="12">
 
-      <button type="submit">Submit Application</button>
+        <!-- Goals & Personality -->
+        <label for="dream">Your Dream Career</label>
+        <input type="text" id="dream" name="dream">
 
-      <div class="note">
-        Please fill all details honestly. This helps us guide you better.
-      </div>
+        <label for="reason">Why Do You Want to Join Mentoroid?</label>
+        <textarea id="reason" name="reason" rows="3"></textarea>
 
+        <label for="earnwhilelearning">Do You Want to Earn While Learning?</label>
+        <select id="earnwhilelearning" name="earnwhilelearning">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="seriousness">Seriousness Level (1-5)</label>
+        <input type="number" id="seriousness" name="seriousness" min="1" max="5">
+
+        <label for="challenge">Current Challenges</label>
+        <textarea id="challenge" name="challenge" rows="3"></textarea>
+
+        <label for="difference">What Makes You Different?</label>
+        <textarea id="difference" name="difference" rows="3"></textarea>
+
+        <label for="followguidance">Will You Follow Guidance Consistently?</label>
+        <select id="followguidance" name="followguidance">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <button type="submit">Submit Registration</button>
     </form>
-  </div>
-
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxa2NefTZIvNjdIacxy7Naa4COo2ljWRYdXRl6tpKjI0ScCkq7odSKpt-zv0j43wL21/exec";
-    const form = document.getElementById("registrationForm");
-
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      const data = {
-        fullName: formData.get("fullName"),
-        email: formData.get("email"),
-        phone: formData.get("phone"),
-        field: formData.get("field"),
-        skills: formData.get("skills"),
-        device: formData.get("device"),
-        hobbies: formData.get("hobbies"),
-        commitment: formData.get("commitment")
-      };
-
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(res => res.json())
-      .then(response => {
-        if (response.result === "success") {
-          alert("✅ Application submitted successfully!");
-          form.reset();
-        } else {
-          alert("❌ Error: " + response.message);
-        }
-      })
-      .catch(error => {
-        alert("❌ Something went wrong. Please try again.");
-        console.error(error);
-      });
-    });
-  </script>
+</div>
 
 </body>
 </html>
