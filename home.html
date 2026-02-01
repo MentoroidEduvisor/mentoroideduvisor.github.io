@@ -20,7 +20,7 @@ body {
 
 a { text-decoration: none; }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
@@ -34,7 +34,10 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-header h2 { margin: 0; font-weight: 800; }
+header h2 {
+  margin: 0;
+  font-weight: 800;
+}
 
 header nav a {
   margin-left: 24px;
@@ -42,9 +45,11 @@ header nav a {
   color: #2b2b2b;
 }
 
-header nav a:hover { color: #ff7a5a; }
+header nav a:hover {
+  color: #ff7a5a;
+}
 
-/* ---------- HERO ---------- */
+/* HERO */
 .hero {
   min-height: 100vh;
   padding: 140px 20px 100px;
@@ -53,6 +58,7 @@ header nav a:hover { color: #ff7a5a; }
   overflow: hidden;
 }
 
+/* shapes */
 .shape {
   position: absolute;
   border-radius: 50%;
@@ -70,7 +76,7 @@ header nav a:hover { color: #ff7a5a; }
   to { transform: translate(80px,-80px); }
 }
 
-/* ---------- TRAINING BANNER ---------- */
+/* TRAINING BANNER */
 .training-banner {
   display: inline-block;
   padding: 60px 70px;
@@ -101,7 +107,7 @@ header nav a:hover { color: #ff7a5a; }
   letter-spacing: 2px;
 }
 
-/* ---------- SECTIONS (UNCHANGED) ---------- */
+/* SECTIONS */
 section {
   max-width: 1000px;
   margin: auto;
@@ -140,7 +146,7 @@ section p {
   margin: auto;
 }
 
-/* ---------- CARDS ---------- */
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
@@ -164,15 +170,19 @@ section p {
   transform: translateY(0);
 }
 
-.card h3 { color: #ff7a5a; }
+.card h3 {
+  color: #ff7a5a;
+}
 
-/* ---------- PARTNERSHIP ---------- */
+/* PARTNERSHIP */
 .partnership {
   background: #fff1eb;
   border-radius: 24px;
 }
 
-.partnership form { margin-top: 30px; }
+.partnership form {
+  margin-top: 30px;
+}
 
 .partnership input,
 .partnership textarea {
@@ -215,13 +225,12 @@ section p {
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO (UPDATED ONLY THIS PART) -->
 <div class="hero">
   <div class="shape one"></div>
   <div class="shape two"></div>
   <div class="shape three"></div>
 
-  <!-- CLICKABLE TRAINING BANNER -->
   <a href="student-registration.html" class="training-banner">
     <h1>Mentoroid Training Program</h1>
     <p>Learn • Earn • Grow with Mentorship</p>
@@ -229,13 +238,68 @@ section p {
   </a>
 </div>
 
-<!-- KEEPING ALL YOUR OTHER SECTIONS EXACTLY SAME BELOW -->
-<!-- (About, Why, Vision, Partner — unchanged) -->
+<!-- ABOUT -->
+<section id="about">
+  <h2>What is Mentoroid?</h2>
+  <p>
+    Mentoroid Eduvisor acts as a mentor and growth partner for students.
+    We guide students to achieve their dream job, dream profession, and financial independence.
+    Mentoroid helps students succeed by doing the right things at the right time.
+    We believe learning and earning should go hand in hand.
+    Mentoroid is a solution for every challenge faced during the journey of success.
+  </p>
+</section>
 
-<!-- paste your existing sections here exactly as before -->
+<!-- WHY -->
+<section id="why">
+  <h2>Why Mentoroid is Required?</h2>
+  <p>
+    India has millions of unemployed youth not because jobs don’t exist,
+    but because skills and guidance are missing.
+    Mentoroid bridges this gap by providing skill-based learning,
+    real-world exposure, and personalized mentorship.
+  </p>
+
+  <div class="cards">
+    <div class="card"><h3>Skill First</h3><p>We teach what industry actually needs.</p></div>
+    <div class="card"><h3>Guidance</h3><p>Step-by-step career mentoring.</p></div>
+    <div class="card"><h3>Earn Early</h3><p>Earn while learning through collaborations.</p></div>
+    <div class="card"><h3>AI Support</h3><p>Mentoroid AI helps in study & work.</p></div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <h2>Our Vision</h2>
+  <p>
+    Our vision is to create a system where every student gets quality education,
+    real guidance, and practical exposure.
+    Mentoroid focuses on skills that truly pay.
+    Our upcoming app will combine learning, freelancing,
+    brand collaborations, and portfolios in one place.
+  </p>
+</section>
+
+<!-- PARTNERSHIP -->
+<section id="partner" class="partnership">
+  <h2>Mentoroid Partnership Program</h2>
+  <p>
+    Mentoroid creates a win-win system for students, brands, and companies.
+    Fill the form below to explore partnership opportunities.
+  </p>
+
+  <form action="partnership-details.html">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="Company / Brand / Institute">
+    <textarea placeholder="How do you want to collaborate?" rows="3"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
 <script>
 const elements = document.querySelectorAll("section, .card");
+
 function reveal() {
   const trigger = window.innerHeight * 0.85;
   elements.forEach(el => {
@@ -244,6 +308,7 @@ function reveal() {
     }
   });
 }
+
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 </script>
