@@ -23,7 +23,6 @@ body {
   padding: 60px 20px;
 }
 
-/* ---------- HEADER ---------- */
 h1 {
   font-size: 42px;
   font-weight: 800;
@@ -38,7 +37,6 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* ---------- GUIDELINES ---------- */
 .guidelines {
   background: #fff1eb;
   border-radius: 20px;
@@ -60,7 +58,6 @@ h1 {
   font-size: 15px;
 }
 
-/* ---------- FORM ---------- */
 form {
   background: white;
   padding: 40px;
@@ -93,7 +90,6 @@ input, select, textarea {
 
 textarea { resize: vertical; }
 
-/* ---------- SUBMIT ---------- */
 button {
   margin-top: 40px;
   padding: 16px 40px;
@@ -111,7 +107,17 @@ button:hover {
   transform: translateY(-4px);
 }
 
-/* ---------- MOBILE ---------- */
+.success-banner {
+  display:none;
+  background:#d4edda;
+  color:#155724;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:30px;
+  text-align:center;
+  font-weight:600;
+}
+
 @media(max-width:768px){
   h1 { font-size: 32px; }
   form { padding: 25px; }
@@ -126,22 +132,26 @@ button:hover {
   <h1>Start Your Journey with Mentoroid</h1>
   <p class="subtitle">Learn • Earn • Grow</p>
 
-  <!-- GUIDELINES -->
   <div class="guidelines">
     <h2>Important Guidelines (Please Read Carefully)</h2>
     <ul>
-      <li>Fill the form honestly and completely. This helps us guide you better.</li>
-      <li>There are no right or wrong answers — clarity matters more than perfection.</li>
-      <li>This program is for students who are serious about learning and growth.</li>
-      <li>Incomplete or incorrect information may reduce your chances of selection.</li>
-      <li>Your responses help Mentoroid personalize guidance for you.</li>
+      <li>Fill the form honestly and completely.</li>
+      <li>Clarity matters more than perfection.</li>
+      <li>This program is for serious learners only.</li>
+      <li>Incomplete information may reduce selection chances.</li>
+      <li>Your responses help us personalize guidance.</li>
     </ul>
   </div>
 
-  <!-- FORM -->
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbxa2NefTZIvNjdIacxy7Naa4COo2ljWRYdXRl6tpKjI0ScCkq7odSKpt-zv0j43wL21/exec">
+  <!-- SUCCESS MESSAGE -->
+  <div id="successMessage" class="success-banner">
+    ✅ Application submitted successfully!  
+    You will receive a call on your preferred date and time.
+  </div>
 
-    <!-- BASIC DETAILS -->
+  <!-- FORM -->
+  <form id="mentoroidForm">
+
     <div class="section-title">Basic Details</div>
 
     <label>Full Name</label>
@@ -159,7 +169,6 @@ button:hover {
     <label>Age</label>
     <input type="number" name="age" min="15" max="40" required>
 
-    <!-- EDUCATION -->
     <div class="section-title">Education & Background</div>
 
     <label>Current Status</label>
@@ -173,12 +182,11 @@ button:hover {
     </select>
 
     <label>Field of Study / Interest</label>
-    <input type="text" name="field" placeholder="Eg: Commerce, Tech, Marketing, Design">
+    <input type="text" name="field">
 
-    <!-- DEVICE -->
     <div class="section-title">Resources & Availability</div>
 
-    <label>Which device do you have for learning & work?</label>
+    <label>Device Available</label>
     <select name="device" required>
       <option value="">Select</option>
       <option>Laptop</option>
@@ -187,7 +195,7 @@ button:hover {
       <option>No Personal Device</option>
     </select>
 
-    <label>How many hours can you dedicate daily?</label>
+    <label>Daily Time Commitment</label>
     <select name="hours" required>
       <option value="">Select</option>
       <option>Less than 1 hour</option>
@@ -196,61 +204,52 @@ button:hover {
       <option>More than 4 hours</option>
     </select>
 
-    <!-- GOALS -->
-    <div class="section-title">Goals & Mindset</div>
+    <div class="section-title">Goals</div>
 
-    <label>What is your dream career or profession?</label>
+    <label>Dream Career</label>
     <textarea name="career" rows="3" required></textarea>
 
-    <label>Why do you want to join Mentoroid?</label>
+    <label>Why Join Mentoroid?</label>
     <textarea name="why" rows="3" required></textarea>
 
-    <label>Do you want to earn while learning?</label>
-    <select name="earn" required>
-      <option value="">Select</option>
-      <option>Yes, definitely</option>
-      <option>Maybe in future</option>
-      <option>No, only learning</option>
-    </select>
+    <div class="section-title">Consultation Preference</div>
 
-    <!-- DEDICATION -->
-    <div class="section-title">Dedication & Discipline</div>
+    <label>Preferred Call Date</label>
+    <input type="date" name="preferredDate" required>
 
-    <label>How serious are you about improving your skills? (1–5)</label>
-    <select name="serious" required>
-      <option value="">Select</option>
-      <option>1 - Not serious</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5 - Extremely serious</option>
-    </select>
-
-    <label>What challenges are you currently facing in your career or studies?</label>
-    <textarea name="challenges" rows="3"></textarea>
-
-    <label>What makes you different from others?</label>
-    <textarea name="unique" rows="3"></textarea>
-
-    <!-- PERSONAL -->
-    <div class="section-title">Personal Insights</div>
-
-    <label>Your hobbies or interests</label>
-    <input type="text" name="hobbies" placeholder="Eg: Content creation, sports, teaching">
-
-    <label>If selected, are you willing to follow guidance consistently?</label>
-    <select name="consistency" required>
-      <option value="">Select</option>
-      <option>Yes</option>
-      <option>Not sure</option>
-      <option>No</option>
-    </select>
+    <label>Preferred Call Time</label>
+    <input type="time" name="preferredTime" required>
 
     <button type="submit">Submit Application</button>
 
   </form>
 
 </div>
+
+<script>
+const form = document.getElementById("mentoroidForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbxa2NefTZIvNjdIacxy7Naa4COo2ljWRYdXRl6tpKjI0ScCkq7odSKpt-zv0j43wL21/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    form.reset();
+    successMessage.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  })
+  .catch(error => {
+    alert("Something went wrong. Please try again.");
+  });
+});
+</script>
 
 </body>
 </html>
