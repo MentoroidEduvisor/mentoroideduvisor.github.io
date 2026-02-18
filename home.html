@@ -2,186 +2,188 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mentoroid Eduvisor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoroid Eduvisor</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #ffe6dc;
-  color: #2b2b2b;
-  scroll-behavior: smooth;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffe6dc;
+  color:#2b2b2b;
+  scroll-behavior:smooth;
 }
-a { text-decoration: none; color: inherit; }
+a{text-decoration:none;color:inherit}
 
 /* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(255,214,195,0.95);
-  backdrop-filter: blur(10px);
-  padding: 16px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,214,195,0.95);
+  backdrop-filter:blur(10px);
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:100;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
-header h2 { margin: 0; font-weight: 800; }
-header nav a { margin-left: 24px; font-weight: 600; }
-header nav a:hover { color: #ff7a5a; }
+header h2{font-weight:800}
+header nav a{margin-left:24px;font-weight:600}
+header nav a:hover{color:#ff7a5a}
 
-/* GENERAL SECTION */
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 100px 20px;
+/* PREMIUM HERO */
+.hero{
+  padding:120px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#111827,#1f2937);
+  color:white;
 }
-section h2 {
-  font-size: 42px;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 800;
+.hero h1{
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:20px;
 }
-section p {
-  max-width: 850px;
-  margin: 0 auto 22px;
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: center;
+.hero p{
+  font-size:20px;
+  max-width:850px;
+  margin:0 auto 30px;
+  color:#d1d5db;
 }
-ul {
-  max-width: 850px;
-  margin: 30px auto;
-  padding-left: 0;
-  list-style: none;
+.hero button{
+  padding:15px 40px;
+  border-radius:50px;
+  border:none;
+  background:#ff7a5a;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
 }
-ul li {
-  font-size: 18px;
-  margin-bottom: 12px;
-  padding-left: 28px;
-  position: relative;
-}
-ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #ff7a5a;
-  font-weight: 800;
+.hero button:hover{
+  background:#ff5e3a;
+  transform:translateY(-3px);
 }
 
-/* HERO STYLE INTRO BLOCK */
-.highlight-box {
-  background: white;
-  padding: 50px;
-  border-radius: 28px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-  margin-top: 40px;
+/* GENERAL SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+section h2{
+  font-size:36px;
+  text-align:center;
+  margin-bottom:25px;
+}
+section p{
+  max-width:850px;
+  margin:0 auto 20px;
+  text-align:center;
+  line-height:1.7;
+  font-size:17px;
+}
+ul{
+  max-width:800px;
+  margin:20px auto;
+  padding-left:20px;
 }
 
 /* POSTER STRIP */
-.poster-strip {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 30px 10px 10px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+.poster-strip{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding:20px 10px;
+  scroll-snap-type:x mandatory;
 }
-.poster-strip::-webkit-scrollbar { display: none; }
-
-.poster-card {
-  min-width: 260px;
-  flex: 0 0 auto;
-  background: white;
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  scroll-snap-align: start;
-  transition: 0.3s ease;
+.poster-strip::-webkit-scrollbar{display:none}
+.poster-card{
+  min-width:260px;
+  background:white;
+  padding:24px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:.3s;
 }
-.poster-card:hover { transform: translateY(-5px); }
-.poster-card h4 { margin-top: 0; color: #ff7a5a; }
+.poster-card:hover{
+  transform:translateY(-5px);
+}
+.poster-card h4{
+  color:#ff7a5a;
+  margin-bottom:10px;
+}
 
 /* SERVICE BLOCK */
-.service-block { margin-bottom: 60px; }
-.service-block h3 { font-size: 24px; margin-bottom: 15px; }
+.service-block{margin-bottom:60px}
+.service-block h3{
+  font-size:24px;
+  margin-bottom:15px;
+  text-align:center;
+}
 
-/* VISION UPGRADE */
-.vision-section {
-  background: linear-gradient(135deg,#ff7a5a,#ff9a7a);
-  color: white;
-  border-radius: 30px;
-  padding: 70px 30px;
-  text-align: center;
+/* VISION SECTION PREMIUM */
+.vision{
+  background:linear-gradient(135deg,#ff7a5a,#ff9a7a);
+  color:white;
+  text-align:center;
+  border-radius:30px;
 }
-.vision-section h2 {
-  font-size: 40px;
-  margin-bottom: 25px;
-}
-.vision-section p {
-  font-size: 19px;
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-.vision-section ul {
-  display: inline-block;
-  text-align: left;
-}
-.vision-section ul li {
-  font-size: 18px;
-}
-.vision-section ul li::before {
-  color: white;
+.vision ul{
+  text-align:left;
+  display:inline-block;
 }
 
 /* NOTICE */
-.notice {
-  background: #fff1eb;
-  padding: 60px 20px;
-  text-align: center;
+.notice{
+  background:#fff1eb;
+  padding:60px 20px;
+  text-align:center;
 }
-.notice h2 { margin-bottom: 15px; }
 
 /* ACTION BANNERS */
-.action-section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px 60px;
+.action-section{
+  max-width:1000px;
+  margin:60px auto;
+  padding:0 20px 60px;
 }
-.action-banner {
-  background: linear-gradient(135deg,#ff7a5a,#ff9a7a);
-  color: white;
-  padding: 40px;
-  border-radius: 24px;
-  margin-bottom: 30px;
-  text-align: center;
-  transition: 0.3s ease;
+.action-banner{
+  background:linear-gradient(135deg,#ff7a5a,#ff9a7a);
+  color:white;
+  padding:40px;
+  border-radius:24px;
+  margin-bottom:30px;
+  text-align:center;
+  transition:.3s;
 }
-.action-banner:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(255,122,90,0.35);
+.action-banner:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(255,122,90,0.35);
 }
-.action-banner button {
-  padding: 14px 36px;
-  border-radius: 40px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  background: white;
-  color: #ff7a5a;
+.action-banner button{
+  padding:14px 36px;
+  border-radius:40px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  background:white;
+  color:#ff7a5a;
+}
+
+footer{
+  background:#111827;
+  color:#ccc;
+  text-align:center;
+  padding:20px;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  section h2 { font-size: 30px; }
-  section p, ul li { font-size: 16px; }
-  .highlight-box { padding: 30px; }
-  .vision-section h2 { font-size: 28px; }
+  .hero h1{font-size:32px}
+  section h2{font-size:26px}
+  .poster-card{min-width:220px}
 }
 </style>
 </head>
@@ -197,52 +199,109 @@ ul li::before {
   </nav>
 </header>
 
-<!-- SECTION 1 UPGRADED -->
+<!-- HERO -->
+<section class="hero">
+  <h1>India’s Structured Student Growth Ecosystem</h1>
+  <p>
+    Mentoroid combines AI mentorship, skill development, earning systems, and portfolio building
+    into one powerful ecosystem designed to transform students into income-ready professionals.
+  </p>
+  <button>Start Your Journey</button>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
   <h2>What Is Mentoroid Eduvisor</h2>
+  <p>We eliminate confusion and replace it with direction.</p>
 
-  <div class="highlight-box">
-    <p>Mentoroid Eduvisor is a structured growth ecosystem built to eliminate confusion and replace it with clarity.</p>
-    <p>We guide students toward meaningful skills, income opportunities, and long-term direction using mentorship and smart systems.</p>
-    <p>Learning and earning are no longer separate paths — they grow together inside Mentoroid.</p>
-
-    <ul>
-      <li>Solves lack of career clarity</li>
-      <li>Bridges skill and job gap</li>
-      <li>Creates earning opportunities early</li>
-      <li>Provides structured mentorship</li>
-    </ul>
-  </div>
+  <ul>
+    <li>Lack of career clarity</li>
+    <li>Skill-job mismatch</li>
+    <li>No earning opportunities during learning</li>
+    <li>No structured guidance</li>
+  </ul>
 
   <div class="poster-strip">
-    <div class="poster-card"><h4>Clarity System</h4><p>Structured roadmap for growth.</p></div>
-    <div class="poster-card"><h4>Skill Mapping</h4><p>Identify valuable skills.</p></div>
-    <div class="poster-card"><h4>Mentorship</h4><p>Guidance at every stage.</p></div>
-    <div class="poster-card"><h4>Earning Start</h4><p>Income while learning.</p></div>
+    <div class="poster-card"><h4>Clarity System</h4><p>Structured roadmap for career growth.</p></div>
+    <div class="poster-card"><h4>Skill Mapping</h4><p>Identify skills that truly pay.</p></div>
+    <div class="poster-card"><h4>Mentorship Access</h4><p>Guidance at every step.</p></div>
+    <div class="poster-card"><h4>Earning Start</h4><p>Learn and earn simultaneously.</p></div>
     <div class="poster-card"><h4>AI Support</h4><p>Smart assistance anytime.</p></div>
   </div>
 </section>
 
-<!-- SERVICES (UNCHANGED STRUCTURE) -->
+<!-- SERVICES -->
 <section id="services">
   <h2>Mentoroid Core Services</h2>
-  <!-- Keep your existing service blocks exactly same here -->
-</section>
 
-<!-- VISION UPGRADED -->
-<section id="vision">
-  <div class="vision-section">
-    <h2>The Vision of Mentoroid</h2>
-    <p>Our vision is to build the most structured student growth ecosystem powered by mentorship, skill intelligence, and early earning systems.</p>
-    <ul>
-      <li>Skill-first education model</li>
-      <li>AI-powered personal guidance</li>
-      <li>Portfolio-based recognition</li>
-      <li>Real earning opportunities</li>
-      <li>Long-term career ecosystem</li>
-    </ul>
+  <div class="service-block">
+    <h3>Personalised AI Mentor</h3>
+    <div class="poster-strip">
+      <div class="poster-card"><h4>Career Analysis</h4><p>Understand your direction.</p></div>
+      <div class="poster-card"><h4>Goal Structuring</h4><p>Clear planning.</p></div>
+      <div class="poster-card"><h4>Daily Guidance</h4><p>Consistent growth tracking.</p></div>
+      <div class="poster-card"><h4>Progress Review</h4><p>Measure improvement.</p></div>
+    </div>
+  </div>
+
+  <div class="service-block">
+    <h3>Mentoroid Vault – Earning Ecosystem</h3>
+    <div class="poster-strip">
+      <div class="poster-card"><h4>Brand Collaborations</h4><p>Earn through promotions.</p></div>
+      <div class="poster-card"><h4>Freelance Tasks</h4><p>Real-world projects.</p></div>
+      <div class="poster-card"><h4>Commission Models</h4><p>Performance-based income.</p></div>
+      <div class="poster-card"><h4>Affiliate System</h4><p>Monetize smartly.</p></div>
+    </div>
   </div>
 </section>
+
+<!-- VISION -->
+<section id="vision" class="vision">
+  <h2>The Vision of Mentoroid</h2>
+  <p>
+    To build India’s most structured AI-powered student growth ecosystem.
+  </p>
+  <ul>
+    <li>Skill-first education model</li>
+    <li>Early earning opportunities</li>
+    <li>AI-driven mentorship</li>
+    <li>Portfolio-based recognition</li>
+    <li>Structured career ecosystems</li>
+  </ul>
+</section>
+
+<!-- NOTICE -->
+<div class="notice">
+  <h2>All Mentoroid Services Will Be Live Soon</h2>
+  <p>The ecosystem is under development. Begin your journey below.</p>
+</div>
+
+<!-- ACTION SECTION -->
+<div class="action-section">
+
+  <div class="action-banner">
+    <h3>Talk With Mentoroid AI</h3>
+    <p>Get clarity and structured guidance.</p>
+    <button>Start AI Interaction</button>
+  </div>
+
+  <div class="action-banner">
+    <h3>Book a Free Consultation Call</h3>
+    <p>Plan your direction strategically.</p>
+    <button>Book Free Call</button>
+  </div>
+
+  <div class="action-banner">
+    <h3>Join Mentoroid Training Program</h3>
+    <p>Become part of the growth ecosystem.</p>
+    <button>Join Program</button>
+  </div>
+
+</div>
+
+<footer>
+© 2026 Mentoroid Eduvisor. All Rights Reserved.
+</footer>
 
 </body>
 </html>
