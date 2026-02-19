@@ -9,119 +9,23 @@
 
 <style>
 * { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #ffe6dc;
-  color: #2b2b2b;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-h1 {
-  font-size: 42px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
-}
-
-.guidelines {
-  background: #fff1eb;
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 50px;
-}
-
-.guidelines h2 {
-  margin-top: 0;
-  color: #ff7a5a;
-}
-
-.guidelines ul {
-  padding-left: 20px;
-}
-
-.guidelines li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-form {
-  background: white;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-}
-
-.section-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 40px 0 20px;
-  color: #ff7a5a;
-}
-
-label {
-  display: block;
-  margin: 18px 0 6px;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-}
-
+body { margin: 0; font-family: 'Poppins', sans-serif; background: #ffe6dc; color: #2b2b2b; }
+.container { max-width: 900px; margin: auto; padding: 60px 20px; }
+h1 { font-size: 42px; font-weight: 800; text-align: center; margin-bottom: 10px; }
+.subtitle { text-align: center; font-size: 18px; letter-spacing: 2px; margin-bottom: 40px; }
+.guidelines { background: #fff1eb; border-radius: 20px; padding: 30px; margin-bottom: 50px; }
+.guidelines h2 { margin-top: 0; color: #ff7a5a; }
+.guidelines ul { padding-left: 20px; }
+.guidelines li { margin-bottom: 10px; font-size: 15px; }
+form { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
+.section-title { font-size: 22px; font-weight: 700; margin: 40px 0 20px; color: #ff7a5a; }
+label { display: block; margin: 18px 0 6px; font-weight: 600; font-size: 15px; }
+input, select, textarea { width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; font-size: 15px; font-family: 'Poppins', sans-serif; }
 textarea { resize: vertical; }
-
-button {
-  margin-top: 40px;
-  padding: 16px 40px;
-  font-size: 16px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg,#ff7a5a,#ff9a7a);
-  color: white;
-  box-shadow: 0 12px 30px rgba(255,122,90,0.35);
-  transition: 0.3s ease;
-}
-
-button:hover {
-  transform: translateY(-4px);
-}
-
-.success-banner {
-  display:none;
-  background:#d4edda;
-  color:#155724;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:30px;
-  text-align:center;
-  font-weight:600;
-}
-
-@media(max-width:768px){
-  h1 { font-size: 32px; }
-  form { padding: 25px; }
-}
+button { margin-top: 40px; padding: 16px 40px; font-size: 16px; border-radius: 50px; border: none; cursor: pointer; background: linear-gradient(135deg,#ff7a5a,#ff9a7a); color: white; box-shadow: 0 12px 30px rgba(255,122,90,0.35); transition: 0.3s ease; }
+button:hover { transform: translateY(-4px); }
+.success-banner { display:none; background:#d4edda; color:#155724; padding:20px; border-radius:12px; margin-bottom:30px; text-align:center; font-weight:600; }
+@media(max-width:768px){ h1 { font-size: 32px; } form { padding: 25px; } }
 </style>
 </head>
 
@@ -152,25 +56,21 @@ button:hover {
   <!-- FORM -->
   <form id="mentoroidForm">
 
+    <!-- BASIC DETAILS -->
     <div class="section-title">Basic Details</div>
-
     <label>Full Name</label>
     <input type="text" name="fullName" required>
-
     <label>Email Address</label>
     <input type="email" name="email" required>
-
     <label>Mobile Number</label>
     <input type="tel" name="mobile" required>
-
     <label>City / State</label>
     <input type="text" name="city" required>
-
     <label>Age</label>
     <input type="number" name="age" min="15" max="40" required>
 
+    <!-- EDUCATION & BACKGROUND -->
     <div class="section-title">Education & Background</div>
-
     <label>Current Status</label>
     <select name="status" required>
       <option value="">Select</option>
@@ -180,12 +80,11 @@ button:hover {
       <option>Working Professional</option>
       <option>Other</option>
     </select>
-
     <label>Field of Study / Interest</label>
     <input type="text" name="field">
 
+    <!-- RESOURCES & AVAILABILITY -->
     <div class="section-title">Resources & Availability</div>
-
     <label>Device Available</label>
     <select name="device" required>
       <option value="">Select</option>
@@ -194,7 +93,6 @@ button:hover {
       <option>Laptop + Mobile</option>
       <option>No Personal Device</option>
     </select>
-
     <label>Daily Time Commitment</label>
     <select name="hours" required>
       <option value="">Select</option>
@@ -204,24 +102,21 @@ button:hover {
       <option>More than 4 hours</option>
     </select>
 
+    <!-- GOALS -->
     <div class="section-title">Goals</div>
-
     <label>Dream Career</label>
     <textarea name="career" rows="3" required></textarea>
-
     <label>Why Join Mentoroid?</label>
     <textarea name="why" rows="3" required></textarea>
 
+    <!-- CONSULTATION PREFERENCE -->
     <div class="section-title">Consultation Preference</div>
-
     <label>Preferred Call Date</label>
     <input type="date" name="preferredDate" required>
-
     <label>Preferred Call Time</label>
     <input type="time" name="preferredTime" required>
 
     <button type="submit">Submit Application</button>
-
   </form>
 
 </div>
@@ -236,14 +131,18 @@ form.addEventListener("submit", function(e){
   const formData = new FormData(form);
 
   fetch("https://script.google.com/macros/s/AKfycbwkAHHtCYHriUpqMAD3xO-NeYB6OaU62zEIzWf1AKVuGlzrFJQr0DawJfWFnG0dLV87NQ/exec", {
-  method: "POST",
-  body: formData
-})
-  .then(response => response.text())
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
   .then(data => {
-    form.reset();
-    successMessage.style.display = "block";
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if(data.status === "success"){
+      form.reset();
+      successMessage.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      alert("Error: "+data.message);
+    }
   })
   .catch(error => {
     alert("Something went wrong. Please try again.");
