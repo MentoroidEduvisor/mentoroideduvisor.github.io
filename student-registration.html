@@ -235,10 +235,10 @@ form.addEventListener("submit", function(e){
 
   const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbxa2NefTZIvNjdIacxy7Naa4COo2ljWRYdXRl6tpKjI0ScCkq7odSKpt-zv0j43wL21/exec", {
-    method: "POST",
-    body: formData
-  })
+  fetch("https://script.google.com/macros/s/AKfycbwkAHHtCYHriUpqMAD3xO-NeYB6OaU62zEIzWf1AKVuGlzrFJQr0DawJfWFnG0dLV87NQ/exec", {
+  method: "POST",
+  body: formData
+})
   .then(response => response.text())
   .then(data => {
     form.reset();
