@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mentoroid Login</title>
+</head>
+<body>
+
+<h2>Mentoroid Dashboard Login</h2>
+
+<!-- Email Login -->
+<input type="email" id="email" placeholder="Enter Email"><br><br>
+<input type="password" id="password" placeholder="Enter Password"><br><br>
+
+<button onclick="emailLogin()">Login with Email</button>
+
+<br><br>
+<hr>
+<br>
+
+<!-- Google Login -->
+<button onclick="googleLogin()">Login with Google</button>
+
+<p id="message"></p>
+
+<script type="module">
+
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+
+import { 
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup
+} 
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+
+// 🔥 YOUR FIREBASE CONFIG
+const firebaseConfig = {
+  apiKey: "AIzaSyAic5ksoDaHkN3aGZ3DvAqvPbECep5h1AM",
+  authDomain: "mentoroid-brain.firebaseapp.com",
+  projectId: "mentoroid-brain",
+  storageBucket: "mentoroid-brain.firebasestorage.app",
+  messagingSenderId: "1094210852482",
+  appId: "1:1094210852482:web:811b705bf0ad7105de069b"
+};
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+// Email Login Function
+window.emailLogin = function() {
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      document.getElementById("message").innerText = "Login Successful";
+      window.location.href = "student.html";
+    })
+    .catch((error) => {
+      document.getElementById("message").innerText = error.message;
+    });
+
+};
+
+
+// Google Login Function
+window.googleLogin = function() {
+
+  const provider = new GoogleAuthProvider();
+
+  signInWithPopup(auth, provider)
+    .then(() => {
+      document.getElementById("message").innerText = "Login Successful";
+      window.location.href = "student.html";
+    })
+    .catch((error) => {
+      document.getElementById("message").innerText = error.message;
+    });
+
+};
+
+</script>
+
+</body>
+</html>
