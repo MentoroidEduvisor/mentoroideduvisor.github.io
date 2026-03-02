@@ -154,8 +154,7 @@ footer{
     and portfolio building into one powerful ecosystem.
   </p>
 
-  <!-- SMART LOGIN REDIRECT -->
-  <button onclick="goToLogin('start.html')">
+   <button onclick="window.location.href='start.html'">
   Start Your Journey
 </button>
 </section>
@@ -183,14 +182,14 @@ footer{
 
   <div class="action-banner">
     <h3>Book a Free Consultation Call</h3>
-    <button onclick="goToLogin('freeconsultation.html')">
+    <button onclick="window.location.href='freeconsultation.html'">
   Book Free Call
 </button>
   </div>
 
   <div class="action-banner">
     <h3>Join Mentoroid Training Program</h3>
-    <button onclick="goToLogin('training.html')">
+    <button onclick="window.location.href='training.html'">
   Join Training
 </button>
   </div>
@@ -201,12 +200,3 @@ footer{
 ©️ 2026 Mentoroid Eduvisor. All Rights Reserved.
 </footer>
 
-<!-- LOGIN REDIRECT SCRIPT -->
-<script>
-function goToLogin(page) {
-  window.location.href = "dashboard/login.html?redirect=" + encodeURIComponent(page);
-}
-</script>
-
-</body>
-</html>
