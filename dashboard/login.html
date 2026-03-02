@@ -152,7 +152,7 @@ window.googleLogin = function(){
 
   signInWithPopup(auth, provider)
   .then(()=>{
-    window.location.href="student.html";
+    window.location.href = redirectPage;
   })
   .catch(error=>{
     document.getElementById("message").innerText=error.message;
