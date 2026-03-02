@@ -184,15 +184,15 @@ footer{
 
   <div class="action-banner">
     <h3>Book a Free Consultation Call</h3>
-    <button onclick="goToLogin('dashboard/student.html')">
-      Book Free Call
-    </button>
+    <button onclick="goToLogin('freeconsultation.html')">
+  Book Free Call
+</button>
   </div>
 
   <div class="action-banner">
     <h3>Join Mentoroid Training Program</h3>
-    <button onclick="goToLogin('freeconsultation.html')">
-  Book Free Call
+    <button onclick="goToLogin('training.html')">
+  Join Training
 </button>
   </div>
 
@@ -204,9 +204,8 @@ footer{
 
 <!-- LOGIN REDIRECT SCRIPT -->
 <script>
-function goToLogin(destination){
-  localStorage.setItem("redirectAfterLogin", destination);
-  window.location.href="dashboard/login.html";
+function goToLogin(page) {
+  window.location.href = "dashboard/login.html?redirect=" + encodeURIComponent(page);
 }
 </script>
 
