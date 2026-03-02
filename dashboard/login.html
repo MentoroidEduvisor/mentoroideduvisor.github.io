@@ -138,18 +138,12 @@ window.emailLogin = function(){
   const password = document.getElementById("password").value;
 
   signInWithEmailAndPassword(auth, email, password)
-  .then(()=>{
-
-    if (redirectPage) {
-      window.location.href = redirectPage;
-    } else {
-      window.location.href = "home.html";
-    }
-
-  })
-  .catch(()=>{
+.then(()=>{
+    window.location.href = "../home.html";
+})
+.catch(()=>{
     document.getElementById("message").innerText = "Invalid Email or Password";
-  });
+});
 
 };
 
@@ -159,18 +153,12 @@ window.googleLogin = function(){
   const provider = new GoogleAuthProvider();
 
   signInWithPopup(auth, provider)
-  .then(()=>{
-
-    if (redirectPage) {
-      window.location.href = redirectPage;
-    } else {
-     window.location.href = "home.html";
-    }
-
-  })
-  .catch(error=>{
+.then(()=>{
+    window.location.href = "../home.html";
+})
+.catch(error=>{
     document.getElementById("message").innerText = error.message;
-  });
+});
 
 };
 
